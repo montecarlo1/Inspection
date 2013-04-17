@@ -1,0 +1,29 @@
+<com.bchd.inspection.ui.Control.DateTimeControl xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+     <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="标题："
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+   <!--  <EditText
+        android:id="@+id/txtValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="date" >
+        <requestFocus />
+    </EditText> -->
+
+	<com.bchd.inspection.ui.Control.date_select_control 
+     android:id="@+id/txtValue"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    />
+	</com.bchd.inspection.ui.Control.DateTimeControl>

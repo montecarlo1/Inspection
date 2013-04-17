@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">移动稽查</string>
+    <string name="category_home">现场稽查</string>
+    <string name="category_realtime">现场稽查</string>
+    <string name="category_nonerealtime">非现场稽查</string>
+    <string name="category_search">信息检索</string>
+    <string name="category_others">其它</string>
+    <string name="category_more">更多</string>
+    <string name="search_hit">输入被稽查人姓名</string>
+    <string name="search_text">查询</string>
+    <string name="hot_search">热门搜索</string>
+    <string name="search_history">搜索历史</string>
+    <string name="clear_search_history">清除</string>
+    <string name="leave_look">离线观看</string>
+    <string name="play_history">播放记录</string>
+    <string name="favorite">收藏夹</string>
+    <string name="my_account">我的帐号</string>
+    <string name="setting">设置</string>
+    <string name="feedback">数据同步</string>
+    <string name="help">人员车道信息更新</string>
+    <string name="about">软件更新</string>
+    <string name="login">登录</string>
+    <string name="back">返回</string>
+    <string name="login_user_edit_hint">请输入员工号</string>
+    <string name="login_passwd_edit">请输入密码</string>
+    
+    <string name="network_not_connected">网络连接失败，请检查网络设置</string>
+    <string name="xml_parser_failed">数据解析异常</string>
+    <string name="io_exception_error">文件流异常</string>
+    <string name="http_status_code_error">网络异常，错误码：%d</string>
+    <string name="http_exception_error">网络异常，请求超时</string>
+    <string name="socket_exception_error">网络异常，读取数据超时</string>
+    <string name="app_run_code_error">应用程序运行时异常</string>
+    
+    <string name="sure">确定</string>
+    <string name="cancle">取消</string>
+
+     <string name="app_error">应用程序错误</string>
+    <string name="app_error_message">很抱歉，应用程序出现错误，即将退出。\n请提交错误报告，我们会尽快修复这个问题！</string>
+    <string name="submit_report">提交报告</string>
+    
+    <string name="startworkDateLable">日期</string>
+    <string name="startworkTimeLable">时间</string>
+    <string name="startFormNo">起始单据号</string>
+    
+    <string name="selectdate">选择日期</string>
+</resources>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroud_road"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dip"
+        android:layout_marginLeft="250dip"
+        android:layout_marginTop="100dip"
+        android:text="稽查："
+        android:textColor="#FFFFFF"
+        android:textSize="26sp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dip"
+        android:layout_marginRight="60dip"
+        android:layout_marginTop="140dip"
+        android:background="@drawable/background"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="填写上岗 时间："
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="295dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="73dp"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="稽查日期："
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <com.bchd.inspection.ui.Control.date_select_control
+                android:id="@+id/de_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+            </com.bchd.inspection.ui.Control.date_select_control>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="295dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="73dp"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="稽查时间："
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <com.bchd.inspection.ui.Control.time_select_control
+                android:id="@+id/de_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+            </com.bchd.inspection.ui.Control.time_select_control>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="295dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="73dp"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="稽查班组："
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/spin_checkergroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="295dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="73dp"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="起始单据："
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_sheetNo"
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="295dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="73dp"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:text="提交" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

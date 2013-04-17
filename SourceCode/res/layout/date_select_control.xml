@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+<RelativeLayout android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+    <!--  android:layout_marginLeft="20dp"
+        android:layout_marginTop="56dp" --> 
+    <EditText
+        android:id="@+id/txtDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"   
+        android:background="@drawable/edittext_1"    
+        android:ems="10"
+        android:inputType="date" >		
+        <requestFocus />
+    </EditText>
+
+    <ImageButton
+        android:id="@+id/btn_SelectDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtDate"
+        android:layout_toRightOf="@+id/txtDate"
+        android:contentDescription="@string/selectdate"
+        android:cropToPadding="true"        
+        android:src="@drawable/ic_datepicker" />
+
+</RelativeLayout>
+
+</LinearLayout>
+
+<!-- 
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+   android:onClick="selectDate"
+    
+    <EditText
+        android:id="@+id/txtDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="56dp"
+        android:ems="10"
+        android:inputType="date" >		
+        <requestFocus />
+    </EditText>
+
+    <ImageButton
+        android:id="@+id/btn_SelectDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtDate"
+        android:layout_toRightOf="@+id/txtDate"
+        android:contentDescription="@string/selectdate"
+        android:cropToPadding="true"        
+        android:src="@drawable/ic_datepicker" />
+
+</RelativeLayout> -->

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" -->
+<!--     android:layout_width="fill_parent" -->
+<!--     android:layout_height="fill_parent" -->
+<!--     android:gravity="center_horizontal" -->
+<!--     android:orientation="vertical" > -->
+
+<!--     <include layout="@layout/title_view" /> -->
+
+<!--     <LinearLayout -->
+<!--         android:id="@+id/linearLayout1" -->
+<!--         android:layout_width="wrap_content" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:layout_marginTop="4dip" > -->
+
+<!--         <ImageView -->
+<!--             android:id="@+id/iv_spocCheck" -->
+<!--             style="@style/channel_type_style" -->
+<!--             android:src="@drawable/channel_type_movie_background"  -->
+<!--             android:clickable="true"/> -->
+
+<!--         <ImageView -->
+<!--             android:id="@+id/channel_type" -->
+<!--             style="@style/channel_type_style" -->
+<!--             android:src="@drawable/channel_type_tv_background" /> -->
+
+<!--         <ImageView -->
+<!--             android:id="@+id/channel_type" -->
+<!--             style="@style/channel_type_style" -->
+<!--             android:src="@drawable/channel_type_cartoon_background" /> -->
+<!--     </LinearLayout> -->
+
+<!--     <LinearLayout -->
+<!--         android:id="@+id/linearLayout1" -->
+<!--         android:layout_width="wrap_content" -->
+<!--         android:layout_height="wrap_content" > -->
+
+<!--         <ImageView -->
+<!--             android:id="@+id/channel_type" -->
+<!--             style="@style/channel_type_style" -->
+<!--             android:src="@drawable/channel_type_fun_background" /> -->
+
+<!--         <ImageView -->
+<!--             android:id="@+id/channel_type" -->
+<!--             style="@style/channel_type_style" -->
+<!--             android:src="@drawable/channel_type_video_clips_background" /> -->
+        
+<!--        <ImageView -->
+<!--             android:id="@+id/channel_type" -->
+<!--             style="@style/channel_type_style" -->
+<!--             android:src="@drawable/channel_type_publicity_background" -->
+<!--             android:visibility="invisible" /> -->
+<!-- 	</LinearLayout> -->
+   
+
+<!-- </LinearLayout> -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroud_road" >
+
+        <ImageButton
+            android:id="@+id/ib_picture"
+            android:layout_width="164dp"
+            android:layout_height="162dp"
+            android:layout_alignLeft="@+id/ib_spotcheck"
+            android:layout_alignTop="@+id/ib_video"
+            android:layout_marginTop="87dp"
+            android:background="@drawable/ib_picture_style" />
+
+        <ImageButton
+            android:id="@+id/ib_spotcheck"
+            android:layout_width="164dp"
+            android:layout_height="162dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="104dp"
+            android:layout_marginTop="69dp"
+            android:background="@drawable/ib_spotcheck_style" />
+
+        <ImageButton
+            android:id="@+id/ib_allcheck"
+            android:layout_width="164dp"
+            android:layout_height="162dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/ib_secretcheck"
+            android:layout_marginRight="48dp"
+            android:layout_marginTop="27dp"
+            android:background="@drawable/ib_allcheck_style" />
+
+        <ImageButton
+            android:id="@+id/ib_video"
+            android:layout_width="164dp"
+            android:layout_height="162dp"
+            android:layout_alignLeft="@+id/ib_secretcheck"
+            android:layout_below="@+id/ib_allcheck"
+            android:layout_marginTop="21dp"
+            android:background="@drawable/ib_video_style" />
+
+        <ImageButton
+            android:id="@+id/ib_secretcheck"
+            android:layout_width="164dp"
+            android:layout_height="162dp"
+            android:layout_alignTop="@+id/ib_spotcheck"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="78dp"
+            android:layout_toRightOf="@+id/ib_spotcheck"
+            android:background="@drawable/ib_secretcheck_style" />
+
+         <TextView
+             android:id="@+id/sys_time2"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="370dp"
+             android:layout_marginLeft="105dp"
+             android:text="月日"
+             android:textSize="21sp" />
+
+         <TextView
+             android:id="@+id/sys_time3"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="195dp"
+             android:layout_marginTop="370dp"             
+             android:text="星期"
+             android:textSize="21sp" />
+
+         <TextView
+             android:id="@+id/textView4"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignBottom="@+id/ib_allcheck"
+             android:layout_alignLeft="@+id/ib_picture"
+             android:layout_marginBottom="33dp"
+             android:text="欢迎您！"
+             android:textSize="30sp" />
+
+         <TextView
+             android:id="@+id/user_name"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_above="@+id/ib_picture"
+             android:layout_alignLeft="@+id/sys_time2"
+             android:text="-"
+             android:textSize="21sp" />
+
+         <TextView
+             android:id="@+id/sys_time"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignLeft="@+id/sys_time2"
+             android:layout_below="@+id/ib_spotcheck"
+             android:layout_marginTop="60dp"
+             android:text=""
+             android:textSize="30sp" />
+
+</RelativeLayout>
