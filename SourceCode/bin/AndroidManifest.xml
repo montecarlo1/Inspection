@@ -22,7 +22,7 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" >
         <activity
-            android:name="com.bchd.inspection.ui.Appstart"
+            android:name="com.bchd.inspection.ui.Login"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,7 +37,7 @@
         <activity android:name="com.bchd.inspection.ui.OthersActivity" />
         <activity android:name="com.bchd.inspection.ui.SearchActivity" />
         <activity android:name="com.bchd.inspection.ui.MoreActivity" />
-        <activity android:name="com.bchd.inspection.ui.Login" />
+         
         <activity android:name="com.bchd.inspection.ui.Welcome" />
         <activity android:name="com.bchd.inspection.ui.LoadingActivity" />
         <activity android:name="com.bchd.inspection.ui.RealTimeFormActivity" />
