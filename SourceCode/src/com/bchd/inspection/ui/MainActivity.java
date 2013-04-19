@@ -30,17 +30,12 @@ public class MainActivity extends TabActivity implements
 
 	// 待跳转的Intent
 	private Intent mRealTimeIntent;
-	private Intent mNoneRealTimeIntent;
-	private Intent mOthersIntent;
-	private Intent mSearchIntent;
-	private Intent mMoreIntent;
+	private Intent mNoneRealTimeIntent; 
+	private Intent mSearchIntent; 
 
 	private final static String TAB_TAG_RealTime = "tab_tag_RealTime";
-	private final static String TAB_TAG_NoneRealTime = "tab_tag_NoneRealTime";
-	private final static String TAB_TAG_Others = "tab_tag_Others";
-	private final static String TAB_TAG_SEARCH = "tab_tag_search";
-	private final static String TAB_TAG_MORE = "tab_tag_more";
-
+	private final static String TAB_TAG_NoneRealTime = "tab_tag_NoneRealTime"; 
+	private final static String TAB_TAG_SEARCH = "tab_tag_search"; 
 	/** Called when the activity is first created. */	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -58,8 +53,7 @@ public class MainActivity extends TabActivity implements
 	
 	@Override
 	protected void onDestroy() {
-		super.onDestroy();
-		
+		super.onDestroy(); 
 		this.Dispose();
 	}
 
@@ -68,10 +62,8 @@ public class MainActivity extends TabActivity implements
 	 */
 	private void prepareIntent() {
 		mRealTimeIntent = new Intent(this, RealTimeActivity.class);
-		mNoneRealTimeIntent = new Intent(this, NoneRealTimeActivity.class);
-		mOthersIntent = new Intent(this, OthersActivity.class);
-		mSearchIntent = new Intent(this, SearchActivity.class);
-		mMoreIntent = new Intent(this, MoreActivity.class);
+		mNoneRealTimeIntent = new Intent(this, NoneRealTimeActivity.class); 
+		mSearchIntent = new Intent(this, SearchActivity.class); 
 	}
 
 	/**
@@ -81,18 +73,14 @@ public class MainActivity extends TabActivity implements
 		this.mTabHost = getTabHost();
 		TabHost localTabHost = this.mTabHost;
 		localTabHost.addTab(buildTabSpec(TAB_TAG_RealTime,
-				R.string.category_realtime, R.drawable.icon_1_n,
+				R.string.category_realtime, R.drawable.main_001,
 				this.mRealTimeIntent));
 		localTabHost.addTab(buildTabSpec(TAB_TAG_NoneRealTime,
-				R.string.category_nonerealtime, R.drawable.icon_2_n,
-				this.mNoneRealTimeIntent));
-		localTabHost.addTab(buildTabSpec(TAB_TAG_Others,
-				R.string.category_others, R.drawable.icon_3_n,
-				this.mOthersIntent));
+				R.string.category_nonerealtime, R.drawable.main_002,
+				this.mNoneRealTimeIntent)); 
 		localTabHost.addTab(buildTabSpec(TAB_TAG_SEARCH,
-				R.string.category_search, R.drawable.icon_4_n, mSearchIntent));
-		localTabHost.addTab(buildTabSpec(TAB_TAG_MORE, R.string.category_more,
-				R.drawable.icon_5_n, mMoreIntent));
+				R.string.category_search, R.drawable.main_003, mSearchIntent));
+		 
 		
 	}
 
@@ -131,14 +119,8 @@ public class MainActivity extends TabActivity implements
 			this.mTabHost.setCurrentTabByTag(TAB_TAG_NoneRealTime);
 			break;
 		case R.id.radio_button2:
-			this.mTabHost.setCurrentTabByTag(TAB_TAG_Others);
-			break;
-		case R.id.radio_button3:
 			this.mTabHost.setCurrentTabByTag(TAB_TAG_SEARCH);
-			break;
-		case R.id.radio_button4:
-			this.mTabHost.setCurrentTabByTag(TAB_TAG_MORE);
-			break;
+			break; 
 		}
 	}
 }

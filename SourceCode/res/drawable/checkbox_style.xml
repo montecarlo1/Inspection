@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:drawable="@drawable/icon_1_c" android:state_checked="true" android:state_focused="true"/>
-    <item android:drawable="@drawable/icon_1_n" android:state_checked="false" android:state_focused="true"/>
-    <item android:drawable="@drawable/icon_1_n" android:state_checked="false" android:state_focused="false"/>
-    <item android:drawable="@drawable/icon_1_n" android:state_checked="true" android:state_focused="false"/>
+    <item android:drawable="@drawable/main_001_" android:state_checked="true" android:state_focused="true"/>
+    <item android:drawable="@drawable/main_001" android:state_checked="false" android:state_focused="true"/>
+    <item android:drawable="@drawable/main_001" android:state_checked="false" android:state_focused="false"/>
+    <item android:drawable="@drawable/main_001_" android:state_checked="true" android:state_focused="false"/>
 
+    <item android:drawable="@drawable/main_002_" android:state_checked="true" android:state_focused="true"/>
+    <item android:drawable="@drawable/main_002" android:state_checked="false" android:state_focused="true"/>
+    <item android:drawable="@drawable/main_002" android:state_checked="false" android:state_focused="false"/>
+    <item android:drawable="@drawable/main_002_" android:state_checked="true" android:state_focused="false"/>
+    
+    <item android:drawable="@drawable/main_003_" android:state_checked="true" android:state_focused="true"/>
+    <item android:drawable="@drawable/main_003" android:state_checked="false" android:state_focused="true"/>
+    <item android:drawable="@drawable/main_003" android:state_checked="false" android:state_focused="false"/>
+    <item android:drawable="@drawable/main_003_" android:state_checked="true" android:state_focused="false"/>
+    
 </selector>

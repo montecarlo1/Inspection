@@ -107,52 +107,79 @@
             android:layout_marginTop="78dp"
             android:layout_toRightOf="@+id/ib_spotcheck"
             android:background="@drawable/ib_secretcheck_style" />
-
-         <TextView
-             android:id="@+id/sys_time2"
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="270dp">
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+		   <TextView    
+		       android:id="@+id/sys_time"
+		       android:layout_width="fill_parent"   
+		       android:layout_height="wrap_content"  
+		       android:layout_marginLeft="100dp"
+		       android:padding="5dp" 
+		       android:textStyle="bold"   
+		       android:text=""  
+		       android:textSize="46sp"
+		   />  		   
+        </TableRow> 
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+		  	<TextView    
+		       android:id="@+id/sys_time2"
+		       android:layout_width="wrap_content"
+               android:layout_height="wrap_content"  
+               android:layout_marginLeft="105dp"
+               android:padding="5dp" 
+		       android:text="月日"  
+		       android:textSize="32sp"
+		   />  	 
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+		    <TextView    
+		       android:id="@+id/sys_time3"
+		       android:layout_marginLeft="88dp"
+		       android:padding="22dp"  
+		       android:text="星期"  
+		       android:textSize="28sp"
+		   />  	
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+		   <TextView    
+		     android:id="@+id/wel"
+		     android:layout_marginLeft="105dp"
+		     android:padding="5dp" 
              android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_marginTop="370dp"
-             android:layout_marginLeft="105dp"
-             android:text="月日"
-             android:textSize="21sp" />
-
-         <TextView
-             android:id="@+id/sys_time3"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_marginLeft="195dp"
-             android:layout_marginTop="370dp"             
-             android:text="星期"
-             android:textSize="21sp" />
-
-         <TextView
-             android:id="@+id/textView4"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_alignBottom="@+id/ib_allcheck"
-             android:layout_alignLeft="@+id/ib_picture"
-             android:layout_marginBottom="33dp"
+             android:layout_height="wrap_content"             
              android:text="欢迎您！"
-             android:textSize="30sp" />
-
-         <TextView
-             android:id="@+id/user_name"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_above="@+id/ib_picture"
-             android:layout_alignLeft="@+id/sys_time2"
-             android:text="-"
-             android:textSize="21sp" />
-
-         <TextView
-             android:id="@+id/sys_time"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_alignLeft="@+id/sys_time2"
-             android:layout_below="@+id/ib_spotcheck"
-             android:layout_marginTop="60dp"
-             android:text=""
-             android:textSize="30sp" />
-
+             android:textSize="28sp" 
+		   />  		   
+        </TableRow>
+         
+       <TableRow
+            android:id="@+id/tableRow5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+		   <TextView    
+		      android:id="@+id/user_name"
+		      android:layout_marginLeft="105dp"
+		      android:padding="5dp" 
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content" 
+              android:text="asa"
+              android:textSize="28sp"
+		   />  		   
+        </TableRow>          
+</TableLayout>
 </RelativeLayout>
