@@ -2,7 +2,9 @@ package com.bchd.inspection.ui;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.TimeZone;
 
 import android.annotation.TargetApi;
 import android.content.Intent;
@@ -10,6 +12,8 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
+import android.os.Message;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
@@ -19,23 +23,95 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bchd.inspection.AppContext;
 import com.bchd.inspection.R;
 @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
 public class RealTimeActivity extends BaseActivity {
 	
 	TextView mTitleView;
 	ImageView btn_realtime;
-	private ImageButton ib_spotCheck = null;
-	
-	
-	
+	private ImageButton ib_spotCheck = null;	
+	private static final int msgKey = 1;
+    private TextView mTime;
+    private TextView mName;
+    private TextView mTime2;
+    private TextView mTime3;
+    private AppContext con = null;
+  //当前时间--月日
+    public String setTime(){
+            long longtime=System.currentTimeMillis();
+            Calendar c=Calendar.getInstance();
+            c.setTimeInMillis(longtime);            
+            int mMonth=c.get(Calendar.MONTH);
+            int mDay=c.get(Calendar.DAY_OF_MONTH);
+            int Month=mMonth+1;
+            return new String(Month+"月"+mDay+"日"); 
+        }   
+    //当前时间--星期
+    public static String getWeekOfDate() {
+        String[] weekDays = {"星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"};
+        Calendar cal = Calendar.getInstance();
+        Date curDate = new Date(System.currentTimeMillis());
+        cal.setTime(curDate);
+        int w = cal.get(Calendar.DAY_OF_WEEK) - 1;
+        if (w < 0)
+            w = 0;
+        return weekDays[w];
+    }   
+    
+    public class TimeThread extends Thread {
+        @Override
+        public void run () {
+            do {
+                try {
+                    Thread.sleep(1000);
+                    Message msg = new Message();
+                    msg.what = msgKey;
+                    mHandler.sendMessage(msg);                  
+                }
+                catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            } while(true);
+        }
+    }
+    
+    private Handler mHandler = new Handler() {
+        @Override
+        public void handleMessage (Message msg) {
+            super.handleMessage(msg);
+            switch (msg.what) {
+               case msgKey:            	     
+            	    SimpleDateFormat sdf=new SimpleDateFormat("kk:mm:ss");
+            	    //sdf.setTimeZone(TimeZone.getTimeZone("Asia/Shanghai"));                     
+                    mTime.setText(sdf.format(new Date()));
+                    break;
+               default:                	 
+                    break;
+            }
+        }
+    };
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.realtime_activity);
+		 //显示系统时间--月日
+        mTime2 = (TextView) findViewById(R.id.sys_time2);
+        mTime2.setText(new RealTimeActivity().setTime());
+        //显示系统时间--星期
+        mTime3 = (TextView) findViewById(R.id.sys_time3);        
+        mTime3.setText(new RealTimeActivity().getWeekOfDate());
+        //显示系统时间--时分秒
+        mTime=(TextView)findViewById(R.id.sys_time);
+        new TimeThread().start();  
+        mName = (TextView)this.findViewById(R.id.user_name);
+		con= (AppContext) getApplication();
+		
+		mName.setText(con.getLoginUsersString(true));
 		prepareView();
+	 
 		//mTitleView.setText(R.string.category_realtime);
 		//现场稽查	
 		//ib_spocCheck.setFocusable(true);   

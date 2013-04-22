@@ -56,7 +56,6 @@ public class SpotCheckActivity  extends BaseActivity{
 		
 		super.onCreate(savedInstanceState);	
 		setContentView(R.layout.spotcheck_activity);
-		
 		prepareView();
 		
 		//修改title名称

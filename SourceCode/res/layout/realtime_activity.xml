@@ -177,7 +177,7 @@
 		      android:padding="5dp" 
               android:layout_width="wrap_content"
               android:layout_height="wrap_content" 
-              android:text="asa"
+              android:text=""
               android:textSize="28sp"
 		   />  		   
         </TableRow>          

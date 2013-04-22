@@ -3,10 +3,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="horizontal" >
-
-<RelativeLayout android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    >
+ 
     <!--  android:layout_marginLeft="20dp"
         android:layout_marginTop="56dp" --> 
     <EditText
@@ -23,16 +20,11 @@
 
     <ImageButton
         android:id="@+id/btn_SelectDate"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/txtDate"
-        android:layout_toRightOf="@+id/txtDate"
-        android:contentDescription="@string/selectdate"
-        android:cropToPadding="true"        
+    
         android:src="@drawable/ic_datepicker" />
-
-</RelativeLayout>
-
+ 
 </LinearLayout>
 
 <!-- 

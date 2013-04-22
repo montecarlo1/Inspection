@@ -146,4 +146,16 @@ public class AppContext extends Application {
 		}
 		return null;
 	}
+	/*
+	 * 判断是否重复登录
+	 */
+	public boolean checkIfRepeatLogin(String loginName)
+	{
+		for(int i = 0; i<loginUsers.size();i++)
+		{
+			if(loginUsers.get(i).getLoginName().equals(loginName))
+				return true;
+		}
+		return false;
+	}
 }

@@ -122,15 +122,14 @@ public class Login extends BaseActivity {
 						mtvWelcome.setText("欢迎登录： "+ con.getLoginUsersString(false));
 						 
 					}
-					else if(con.Login(userID, password) && (con.getLoginUsers().size()>2 ||  m_ClickNum>4)){			
-							Dialog alertDialog = new AlertDialog.Builder(this)
-							.setIcon(R.drawable.ic_launcher)
-							.setTitle("温馨提示")
-							.setMessage("登录人数或同一个人登录次数过多！")
-							.create();
-							alertDialog.show();		
-							 
-					}										
+					else if(con.checkIfRepeatLogin(userID)){
+						Dialog alertDialog = new AlertDialog.Builder(this)
+						.setIcon(R.drawable.ic_launcher)
+						.setTitle("温馨提示")
+						.setMessage("您已成功登录！")
+						.create();
+						alertDialog.show();		
+					}				 							
 					else{
 			                new AlertDialog.Builder(Login.this)
 										.setIcon(getResources()
